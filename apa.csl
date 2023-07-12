@@ -416,7 +416,7 @@
       <else>
         <names variable="composer" delimiter=", ">
           <name form="short" and="symbol" delimiter=", " initialize-with=". "/>
-          <et-al min="2" use-first="1" font-style="italic"/>
+          <et-al min="2" use-first="1"/>
           <substitute>
             <names variable="author"/>
             <names variable="illustrator"/>
