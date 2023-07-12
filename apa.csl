@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" page-range-format="expanded">
   <info>
-    <title>American Psychological Association 7th edition</title>
-    <title-short>APA</title-short>
+    <title>American Psychological Association 7th edition (HM)</title>
+    <title-short>APA (HM)</title-short>
     <id>http://www.zotero.org/styles/apa</id>
     <link href="http://www.zotero.org/styles/apa" rel="self"/>
     <link href="http://www.zotero.org/styles/apa-6th-edition" rel="template"/>
@@ -416,6 +416,7 @@
       <else>
         <names variable="composer" delimiter=", ">
           <name form="short" and="symbol" delimiter=", " initialize-with=". "/>
+          <et-al min="2" use-first="1" font-style="italic"/>
           <substitute>
             <names variable="author"/>
             <names variable="illustrator"/>
