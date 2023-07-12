@@ -406,25 +406,27 @@
       </else-if>
       <else>
         <names variable="composer" delimiter=", ">
-          <name form="short" and="symbol" delimiter=", " initialize-with=". "/>
-          <substitute>
-            <names variable="author"/>
-            <names variable="illustrator"/>
-            <names variable="director"/>
-            <choose>
-              <if variable="container-title">
-                <choose>
-                  <if type="book entry entry-dictionary entry-encyclopedia" match="any">
-                    <text macro="title-intext"/>
-                  </if>
-                </choose>
-              </if>
-            </choose>
-            <names variable="editor"/>
-            <names variable="editorial-director"/>
-            <text macro="title-intext"/>
-          </substitute>
-        </names>
+			<name form="short" and="text" delimiter=", " initialize-with=". " et-al-min="2" et-al-use-first="1">
+				<et-al font-style="italic"/>
+			</name>
+			<substitute>
+				<names variable="author"/>
+				<names variable="illustrator"/>
+				<names variable="director"/>
+				<choose>
+					<if variable="container-title">
+						<choose>
+							<if type="book entry entry-dictionary entry-encyclopedia" match="any">
+								<text macro="title-intext"/>
+							</if>
+						</choose>
+					</if>
+				</choose>
+				<names variable="editor"/>
+				<names variable="editorial-director"/>
+				<text macro="title-intext"/>
+			</substitute>
+		</names>
       </else>
     </choose>
   </macro>
